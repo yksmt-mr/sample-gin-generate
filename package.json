@@ -1,0 +1,15 @@
+{
+  "name": "openapiclient",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate-client": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -i openapi.yml -o ./api/axios",
+    "generate-server-gin": "npx @openapitools/openapi-generator-cli generate -g go-gin-server -i openapi.yml -o ./api/go",
+    "generate-client-php": "npx @openapitools/openapi-generator-cli generate -g php -i openapi.yml -o ./api/php"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.2",
+    "typescript": "4.0.3"
+  }
+}
